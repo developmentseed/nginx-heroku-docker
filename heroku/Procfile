@@ -1,1 +1,1 @@
-web: /app/src/bin/start-nginx
+web: bin/start
