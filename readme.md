@@ -6,11 +6,12 @@ If you want to run NGINX proxy on Heroku's managed environment, this is app is w
 
 In order to use this app, you must have Heroku plugin for docker and docker installed on your computer. You can follow [this guide](https://devcenter.heroku.com/articles/introduction-local-development-with-docker?preview=1) to have the requirements installed.
 
-## Prepare the binary
+## Recompile nginx binary for Cedar-14
 
-Run this command:
+Make sure you have docker and docker-composed installed. Run this command:
 
-    $ heroku docker:exec ./scripts/build_nginx.sh
+    $ docker-compose build web
+    $ docker-compose up web
 
 After the command is executed, nginx's binary is copied to `heroku/bin` folder.
 
