@@ -13,5 +13,5 @@ RUN mkdir -p /app/.profile.d
 
 WORKDIR /app/src
 
-ONBUILD COPY . /app/src
+ADD . /app/src
 ONBUILD EXPOSE 3000
